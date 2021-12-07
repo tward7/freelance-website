@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+//import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import components
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // write javascript here
+    // examples of the use of props
+    const name = "Trent Ward";
+    const age = 22;
+    return (
+        <Router>
+            <div className="App">
+                <NavBar me={name} myAge={age} />
+                <div className="content">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/About" element={<About />} />
+                        <Route path="/Skills" element={<Skills />} />
+                        <Route path="/Experience" element={<Experience />} />
+                        <Route path="/Services" element={<Services />} />
+                        <Route path="/Contact" element={<Contact />} />
+                    </Routes>
+                </div>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

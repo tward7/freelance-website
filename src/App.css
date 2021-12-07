@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+/* import other css files */
+@import "./css/Nav.css";
+@import "./css/Theme.css";
+
+/* nav menu css for all screens */
+nav {
+    background-color: var(--nav-back-color);
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-container {
+    height: auto;
+    width: auto;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.head-shot {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-container p {
+    color: var(--nav-color);
+    margin: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+/* css for NavLink components */
+.nav-link {
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+    color: var(--nav-color);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.nav-link:hover {
+    background-color: var(--nav-hover-color);
+    border-radius: 5px;
+}
+
+/* when NavLink components are actively on that page*/
+nav a.active {
+    background-color: #eee;
+}
+/* for testing borders */
+.border {
+    border: 2px solid green;
+}
+
+/* state example for toggle active */
+.active {
+    opacity: 0;
 }

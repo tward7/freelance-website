@@ -1,0 +1,12 @@
+/* color variables here */
+* {
+    --main-back-color: #ddd5bb;
+    --nav-back-color: #c4b47f;
+    --nav-color: #fff;
+    --nav-hover-color: #005d3b;
+    --btn-text-color: #fff;
+    --btn-back-color: #187754;
+    --btn-hover-color: #005d3b;
+    --footer-text-color: #fff;
+    --footer-back-color: #1d1d1d;
+}
